@@ -1,0 +1,39 @@
+{
+  "name": "alpaki-skills",
+  "version": "1.0.0",
+  "description": "CLI para instalar skills de Alpaki en Cursor / Claude Code",
+  "type": "module",
+  "bin": {
+    "alpaki-skills": "./bin/alpaki-skills.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node ./bin/alpaki-skills.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "alpaki",
+    "skills",
+    "cursor",
+    "claude",
+    "cli"
+  ],
+  "author": "Alpaki",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielandrehz/alpaki-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danielandrehz/alpaki-skills/issues"
+  },
+  "homepage": "https://alpaki.app/skills"
+}
