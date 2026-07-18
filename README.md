@@ -45,6 +45,15 @@ ALPAKI_API_BASE=http://localhost:8881 npx alpaki-skills --skill creative-design/
 npx alpaki-skills --skill creative-design/3d-web-experience --api http://localhost:8881
 ```
 
+## Telemetría de instalaciones
+
+Tras instalar una skill con éxito, el CLI avisa a la API de Alpaki (contador público en la ficha).  
+No envía datos personales. Puedes desactivarlo:
+
+```bash
+ALPAKI_DISABLE_TELEMETRY=1 npx alpaki-skills --skill creative-design/3d-web-experience
+```
+
 ## Publicar en npm
 
 ```bash

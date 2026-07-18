@@ -20,3 +20,9 @@ test('resolveInstallDir supports claude', () => {
   const dir = resolveInstallDir({ cwd: '/tmp/project', tool: 'claude' })
   assert.equal(dir.replace(/\\/g, '/'), '/tmp/project/.claude/skills')
 })
+
+test('recordSkillInstall never throws when API is unreachable', async () => {
+  const { recordSkillInstall } = await import('../lib/api.js')
+  const result = await recordSkillInstall(1, { apiBase: 'http://127.0.0.1:9' })
+  assert.equal(result, null)
+})
