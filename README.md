@@ -1,6 +1,6 @@
 # alpaki-skills
 
-CLI oficial de [Alpaki](https://alpaki.app) para instalar skills en **Cursor** o **Claude Code**.
+Instala skills de [Alpaki](https://alpaki.app/skills) en **Cursor** o **Claude Code** con un solo comando.
 
 ```bash
 npx alpaki-skills@latest --skill creative-design/3d-web-experience
@@ -8,23 +8,23 @@ npx alpaki-skills@latest --skill creative-design/3d-web-experience
 
 ## Qué hace
 
-1. Descarga la skill desde la API de Alpaki (`api.alpaki.app`).
-2. La guarda como `SKILL.md` en:
-   - Cursor: `./.cursor/skills/<slug>/SKILL.md`
-   - Claude: `./.claude/skills/<slug>/SKILL.md` (`--tool claude`)
+1. Descarga la skill desde Alpaki.
+2. La guarda como `SKILL.md` en tu proyecto:
+   - **Cursor:** `.cursor/skills/<slug>/SKILL.md`
+   - **Claude Code:** `.claude/skills/<slug>/SKILL.md` (con `--tool claude`)
 
-No empaqueta las ~800 skills en el npm: se resuelven on-demand, igual que el catálogo web.
+No necesitas instalar nada de forma permanente: `npx` descarga el CLI al vuelo.
 
 ## Uso
 
 ```bash
-# Instalar una skill (mismo comando que muestra alpaki.app/skills)
+# Instalar (mismo comando que ves en alpaki.app/skills)
 npx alpaki-skills@latest --skill creative-design/3d-web-experience
 
 # Atajo sin flag
 npx alpaki-skills@latest development/api-design
 
-# Listar / buscar
+# Listar y buscar
 npx alpaki-skills@latest list
 npx alpaki-skills@latest search "frontend"
 npx alpaki-skills@latest list --category development
@@ -32,44 +32,19 @@ npx alpaki-skills@latest list --category development
 # Claude Code
 npx alpaki-skills@latest --skill git/commit --tool claude
 
-# Destino custom o global
+# Carpeta custom o instalación global
 npx alpaki-skills@latest --skill utilities/summarize --dir ./skills
 npx alpaki-skills@latest --skill utilities/summarize --global
 ```
 
-## API local / staging
+## Requisitos
 
-```bash
-ALPAKI_API_BASE=http://localhost:8881 npx alpaki-skills --skill creative-design/3d-web-experience
-# o
-npx alpaki-skills --skill creative-design/3d-web-experience --api http://localhost:8881
-```
+- Node.js 18 o superior
+- Conexión a internet
 
-## Telemetría de instalaciones
-
-Tras instalar una skill con éxito, el CLI avisa a la API de Alpaki (contador público en la ficha).  
-No envía datos personales. Puedes desactivarlo:
-
-```bash
-ALPAKI_DISABLE_TELEMETRY=1 npx alpaki-skills --skill creative-design/3d-web-experience
-```
-
-## Publicar en npm
-
-```bash
-npm login
-npm publish --access public
-```
-
-Después de publicar, `npx alpaki-skills@latest` funcionará para cualquiera.
-
-## Desarrollo
-
-```bash
-npm start -- --help
-npm start -- --skill creative-design/3d-web-experience --api http://localhost:8881
-```
 
 ## Licencia
 
-MIT. El contenido de cada skill conserva la atribución del origen (claude-code-templates / davila7) cuando aplica.
+Este CLI se publica bajo licencia **MIT**: puedes usarlo, copiarlo y modificarlo libremente.
+
+El contenido de cada skill puede conservar la atribución de su origen cuando corresponda.
