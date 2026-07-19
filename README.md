@@ -42,6 +42,13 @@ npx alpaki-skills@latest --skill utilities/summarize --global
 - Node.js 18 o superior
 - Conexión a internet
 
+## Privacidad
+
+Al instalar una skill, Alpaki puede registrar un contador público de instalaciones en la ficha. No se envían datos personales. Para desactivarlo:
+
+```bash
+ALPAKI_DISABLE_TELEMETRY=1 npx alpaki-skills@latest --skill creative-design/3d-web-experience
+```
 
 ## Licencia
 
