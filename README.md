@@ -1,5 +1,9 @@
 # alpaki-skills
 
+[![release](https://img.shields.io/npm/v/alpaki-skills?label=release)](https://www.npmjs.com/package/alpaki-skills)
+[![npm](https://img.shields.io/npm/v/alpaki-skills?label=npm)](https://www.npmjs.com/package/alpaki-skills)
+[![license](https://img.shields.io/npm/l/alpaki-skills)](./LICENSE)
+
 CLI oficial de [Alpaki](https://alpaki.app) para instalar **skills** (instrucciones reutilizables para agentes de IA) en **Cursor** o **Claude Code**.
 
 En [alpaki.app/skills](https://alpaki.app/skills) eliges una skill y copias el comando. Este CLI hace el resto: descarga el contenido y lo deja listo en tu proyecto.
